@@ -6,22 +6,7 @@ import {connect, Provider } from "react-redux";
 import ContextProvider from "./ContextProvider";
 import Test from "./Test";
 
-
-let store = (state = {testContent:"null"}, action) => {
-    switch(action.type){
-        case "TEST_CONTENT":
-            return {testContent: action.data}
-        default: 
-            return state
-    }
-};
-
-
-window.RBA_react = {};
-window.RBA_react.stores = {};
-let createdStore = createStore(store);
-window.RBA_react.stores.testStore = createdStore;
-
+import {testStore} from "./store/testStore";
 
 const mapStateToProps = (state, props) => {
     return {
@@ -51,9 +36,7 @@ export default class Mocked extends Component {
 const MappedComponent = connect(mapStateToProps, mapDispatchToProps)(Mocked);
 const root = document.getElementById('root');
 
-
-
-ReactDOM.render(<Provider store={createdStore}><MappedComponent/></Provider>, root);
+ReactDOM.render(<Provider store={window.RBA_react.stores.testStore}><MappedComponent/></Provider>, root);
 
 
 

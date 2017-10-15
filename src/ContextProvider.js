@@ -6,7 +6,6 @@ export default class ContextProvider extends Component {
     
     render(){
         const Component = this.props.component;
-        console.log(this.props);
         return(
             <div>
                <Component {...this.props} />
