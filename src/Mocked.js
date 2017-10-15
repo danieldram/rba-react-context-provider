@@ -7,6 +7,9 @@ import ContextProvider from "./ContextProvider";
 import Test from "./Test";
 
 import {testStore} from "./store/testStore";
+import "./actions";
+
+const PageActions = window.RBA_react.actions.PageActions;
 
 const mapStateToProps = (state, props) => {
     return {
@@ -16,9 +19,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onClick: ()=> {
-            dispatch({type: 'TEST_CONTENT', data:"test content"});
-        }
+        onClick: PageActions.onClick
     }
 }
 

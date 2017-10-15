@@ -1,8 +1,12 @@
 import { createStore } from "redux";
 
+import "../action-types";
+
+const ActionTypes = window.RBA_react.ActionTypes.TestActionTypes;
+
 let store = (state = {testContent:"null"}, action) => {
     switch(action.type){
-        case "TEST_CONTENT":
+        case ActionTypes.TEST_CONTENT:
             return {testContent: action.data}
         default: 
             return state
