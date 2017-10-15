@@ -1,6 +1,6 @@
 # RBA Context React Component
 
-![alttext](https://github.com/danieldram/rba-react-context-provider/blob/master/diagrams/front-end%20flow%20diagram%20new.jpg?raw=true)
+![alttext](https://github.com/danieldram/rba-react-context-provider/blob/master/diagrams/front-end%20flow%20diagram-new.jpg?raw=true)
 
 ### Giving liferay application context to react components
 The goal of this component is to allow front-end react components to know less about specific front-end business logic such as ```API Requests (Hawksearch)```, ```WINDOW interactions``` or any ```STATE``` that is not specific for that specific UI component. 

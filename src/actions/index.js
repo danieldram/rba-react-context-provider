@@ -8,7 +8,6 @@ const PageActions = {
     }
 }
 
-
 window.RBA_react = window.RBA_react || {};
 window.RBA_react.actions = window.RBA_react.actions || {};
 window.RBA_react.actions.PageActions = PageActions;
