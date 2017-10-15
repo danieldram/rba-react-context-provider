@@ -6,8 +6,9 @@ export default class Test extends Component {
         const keys = Object.keys(this.props);
         return(
             <span>
-                imagine a serach component UI or an inventory component UI
+                {this.props.testContent}
                 {keys.map( key => console.log(this.props[key])  && `${key}, `)}
+                <button onClick={()=>{ this.props.onClick()} }> Click Me </button>
             </span>
         )
     }

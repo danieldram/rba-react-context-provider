@@ -19,7 +19,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onClick: PageActions.onClick
+        onClick: PageActions.onClick.bind(null, dispatch)
     }
 }
 
