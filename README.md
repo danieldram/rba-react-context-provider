@@ -13,10 +13,10 @@ to the ```Context Component``` so all UI that share that state are updated as we
 
 #### The Problem: Use React in a scalable way within the Liferay CMS:
 
-Liferay is a CMS where each page renders a view through it's engine. This means react components need to know the context of which page they are on, any possible taxonamy, categorical references. Currently components operate on the ```WINDOW``` directly, causing race conditions. UI Components currently hold a lot of business logic and are very complex when they should be simple. 
+Liferay is a CMS where each page renders a view through its engine. This means react components need to know the context of which page they are on, any possible taxonamy, categorical refs. Currently components operate on the ```WINDOW``` directly, causing race conditions. UI Components currently hold a lot of business logic and are very complex when they should be simple. 
 
 #### The Solution: Pass down the context to the UI:
- By passing down the context to the UI, we leave all of that front-end business logic abstracted to other files that are brought down to the component from ```WINDOW > <ComponentProvider utils={window.utils} hawksearchAPI={window.PageActions.hawksearch} ```. The UI just has a reference to that functionality and it exists in one place, so things are not duplicated or confusing. Actions exist on the window and are pased down to the UI on run time. State is updated to the Context, and passed down to the UI. The UI renders it's view based on what the Context Component provides, the flow is simplified.
+ By passing down the context to the UI, we leave all of that front-end business logic abstracted to other files that are brought down to the component from ```WINDOW > <ComponentProvider component={UIComponent} utils={window.utils} hawksearchAPI={window.PageActions.hawksearch} ```. The UI just has a reference to that functionality and it exists in one place, so things are not duplicated or confusing. Actions exist on the window and are pased down to the UI on run time. State is updated to the Context, and passed down to the UI. The UI renders its view based on what the Context Component provides, the flow is simplified.
 
 ### TO RUN / INSTALL ### 
 ```
