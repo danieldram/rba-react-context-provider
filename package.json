@@ -1,0 +1,40 @@
+{
+  "name": "context-provider",
+  "version": "0.0.1",
+  "description": "Context Provider for RBA React Components",
+  "main": "./dist/ContextProvider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack  --env.production=false --watch",
+    "start": "webpack-dev-server --env.production=false --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/danieldram/rba-react-context-provider.git"
+  },
+  "author": "Ritchie Bros Auctioneers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danieldram/rba-react-context-provider/issues"
+  },
+  "homepage": "https://github.com/danieldram/rba-react-context-provider#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.0.0"
+  }
+}
