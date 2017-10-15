@@ -14,7 +14,6 @@ let store = (state = {testContent:"null"}, action) => {
 };
 
 
-
 window.RBA_react = window.RBA_react || {};
 window.RBA_react.stores = window.RBA_react.stores || {};
 let testStore = createStore(store);
