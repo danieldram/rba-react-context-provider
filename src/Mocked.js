@@ -36,8 +36,9 @@ export default class Mocked extends Component {
 
 const MappedComponent = connect(mapStateToProps, mapDispatchToProps)(Mocked);
 const root = document.getElementById('root');
+const attrs = root.attributes;
 
-ReactDOM.render(<Provider store={window.RBA_react.stores.testStore}><MappedComponent/></Provider>, root);
+ReactDOM.render(<Provider store={window.RBA_react.stores.testStore}><MappedComponent test={attrs} /></Provider>, root);
 
 
 
